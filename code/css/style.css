@@ -1,0 +1,390 @@
+/* ================== GLOBAL ================== */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f4f3ef;
+  margin: 0;
+  color: #333;
+}
+
+/* Page avec navbar → contenu centré */
+.page-content {
+  margin-left: 220px; /* laisse la place à la sidebar */
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+/* Conteneur principal du CV */
+.cv-container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ================== NAVBAR ================== */
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 180px;
+  background: #2c2c2c;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar a {
+  color: white;
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  color: #d2b48c;
+}
+
+/* ================== COLONNE GAUCHE ================== */
+.left-column {
+  width: 35%;
+  background-color: #f1e7da;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Uniformisation des 3 sections ✅ */
+.left-column section {
+  width: 100%; /* toutes identiques */
+  max-width: 260px; /* même largeur max */
+}
+
+/* Photo profil */
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #d1c3ad;
+}
+
+/* Titres des sections gauche */
+.left-column h3 {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  color: #444;
+  border-bottom: 2px solid #c3b299;
+  width: 100%;
+  padding-bottom: 4px;
+  margin-top: 25px;
+  text-align: left;
+}
+
+/* Texte et listes colonne gauche */
+.left-column p,
+.left-column li {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+.left-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.left-column a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* ================== COLONNE DROITE ================== */
+.right-column {
+  width: 65%;
+  padding: 40px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #2f2f2f;
+  letter-spacing: 1px;
+}
+
+header h2 {
+  margin-top: 5px;
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #806b54;
+  text-transform: uppercase;
+}
+
+section h3 {
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #806b54;
+  border-bottom: 2px solid #c3b299;
+  padding-bottom: 4px;
+  margin-top: 25px;
+}
+
+.project h4 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* ================== MODAL ================== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+.modal-btn {
+  display: inline-block;
+  background: #806b54;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* ================== PAGE PROJET ================== */
+.project-video {
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.img-card {
+  position: relative;
+  height: 140px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.img-card:hover img {
+  transform: scale(1.05);
+}
+
+.img-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 6px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 0.85em;
+  text-align: center;
+}
+
+.code-gallery pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9em;
+  margin-top: 15px;
+}
+
+/* ================== PROJET Overlay ================== */
+.project {
+      position: relative;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .project::after {
+      content: "Clique pour voir le projet";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.1em;
+      opacity: 0;
+      transition: 0.3s;
+      border-radius: 6px;
+    }
+
+    .project:hover::after {
+      opacity: 1;
+    }
+
+    .project:hover {
+      transform: scale(1.02);
+    }
+
+
+    /* ========== CARROUSEL ========== */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carousel-images img {
+  width: 100%;
+  display: none;
+  border-radius: 8px;
+  cursor: zoom-in;
+}
+
+.carousel-images img.active {
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #333;
+}
+
+/* ========== FULLSCREEN IMAGE ========== */
+.img-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.img-overlay img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+
+.close-img {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.overlay-prev, .overlay-next {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.overlay-prev { left: 20px; }
+.overlay-next { right: 20px; }
+
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .cv-container {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .page-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+}
