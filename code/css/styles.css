@@ -11,14 +11,49 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: #eaeaea;
   color: #222;
+  /* line-height: 1.5; */
 }
 
 /* =====================
-   NAVBAR : masquée visuellement
+   NAVBAR 
 ===================== */
 .sidebar {
-  display: none;
+    position: fixed;
+    width: 230px;
+    height: 100%;
+    background-color: #3d3d3d;
+    color: #fff;
+    padding: 20px;
 }
+
+.sidebar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+
+.sidebar li {
+  /* margin-bottom: 10px; */
+}
+
+.sidebar a {
+  color: white;
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  color: #f7b6b2;
+  font-weight: bold;
+}
+
 
 /* =====================
    PAGE
@@ -40,7 +75,7 @@ body {
 /* =====================
    HEADER GLOBAL
 ===================== */
-.right-column header {
+main hgroup {
   background: #7a5a55;
   color: #fff;
   padding: 25px 30px 20px 140px;
@@ -48,12 +83,12 @@ body {
   position: relative;
 }
 
-.right-column header h1 {
+main hgroup h1 {
   font-size: 2rem;
   margin-bottom: 5px;
 }
 
-.right-column header h2 {
+main hgroup p {
   font-size: 1.1rem;
   font-weight: normal;
   opacity: 0.9;
@@ -75,45 +110,44 @@ body {
 /* =====================
    COLONNE GAUCHE
 ===================== */
-.left-column {
+aside {
   background: #f7b6b2;
   padding: 160px 20px 25px;
 }
 
-.left-column h3 {
+aside h3 {
   font-size: 0.9rem;
   letter-spacing: 2px;
   margin: 20px 0 10px;
 }
 
-.left-column p,
-.left-column li {
+aside p,
+aside li {
   font-size: 0.85rem;
   margin-bottom: 6px;
 }
 
-.left-column ul {
+aside ul {
   list-style: none;
   margin-left: 0;
 }
 
-.left-column strong {
+aside strong {
   font-weight: 600;
 }
 
 /* =====================
    COLONNE DROITE
 ===================== */
-.right-column {
+main {
   padding-bottom: 30px;
 }
 
-/* Sections */
-.right-column section {
+main .experience {
   padding: 20px 30px 0;
 }
 
-.right-column h3 {
+main h3 {
   background: #f7b6b2;
   padding: 6px 10px;
   font-size: 0.9rem;
@@ -121,14 +155,9 @@ body {
   margin-bottom: 12px;
 }
 
-/* Profil */
-.profil p {
+main .experience p {
   font-size: 0.9rem;
   text-align: justify;
-}
-
-/* Expériences */
-.experience p {
   margin-bottom: 5px;
 }
 
@@ -151,11 +180,15 @@ body {
 ===================== */
 .greyTitle {
   font-weight: bold;
-  color: #444;
+  color: #909090;
+}
+.greyTitle span {
+  font-weight: normal;
+  color: #000000;
 }
 
-.smaller {
-  font-size: 0.8rem;
+small {
+  font-size: 0.7rem;
   color: #666;
 }
 

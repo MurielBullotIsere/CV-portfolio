@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV Muriel Bullot</title>
-  <link rel="stylesheet" href="code/css/style.css">
+  <link rel="stylesheet" href="code/css/styles.css">
 </head>
 <body>
 
-  <!-- ================== NAVBAR INJECTÉE DIRECTEMENT ================== -->
+  <!-- ================== NAVBAR ================== -->
   <nav class="sidebar">
     <h2>Portfolio</h2>
     <ul>
@@ -34,59 +34,69 @@
     <div class="cv-container">
 
       <!-- Colonne gauche -->
-      <aside class="left-column">
+      <aside>
         <img src="assets/images/profil.jpg" alt="Photo de profil" class="profile-photo">
 
         <section class="contact">
           <h3>CONTACT</h3>
           <p>📞 06 84 19 23 67</p>
-          <p>✉️ <a href="mailto:gagnantnicolas64@gmail.com">murielbullot@hotmail.fr</a></p>
-          <p>💻 <a href="https://github.com/GagnantN" target="_blank">github.com/MurielBullotIsere</a></p>
+          <adress>
+            <p>✉️ <a href="mailto:gagnantnicolas64@gmail.com">murielbullot@hotmail.fr</a></p>
+            <p>💻 <a href="https://github.com/GagnantN" target="_blank">github.com/MurielBullotIsere</a></p>
+          </adress>
           <p>🔗 <a href="https://linkedin.com/in/nicolas-gagnant-938b3a182" target="_blank">linkedin.com/in/muriel-bullot-556697165/</a></p>
           <p>📍 Villard-Bonnot</p>
-          <p>♿ RQTH</p>
+          <p>♿ <strong>RQTH</strong></p>
         </section>
 
         <section class="skills">
-          <h3>COMPÉTENCES TECHNIQUES</h3>
-          <h4>Développement Front-End</h4>
-            <ul>
-                <li><strong>Langages :</strong> JavaScript, HTML, CSS</li>
-                <li><strong>Frameworks :</strong> Bootstrap</li>
-                <li>Compétences en design, mobile-first et responsive</li>
-            </ul>
-          <h4>Développement Back-End</h4>
-            <ul>
-                <li><strong>Langages :</strong> PHP, C++, Python</li>
-                <li><strong>Bases de données :</strong> MySQL</li>
-                <li><strong>Frameworks :</strong> Node.js, Django</li>
-            </ul>
-          <h4>Compétences transversales</h4>
-            <ul>
-                <li>Plan de tests unitaires et fonctionnels</li>
-                <li><strong>Systèmes :</strong> Linux</li>
-                <li><strong>DevOps :</strong> Docker</li>
-                <li><strong>Contrôle de version :</strong> Git</li>
-                <li><strong>Méthodologies :</strong> Agile</li>
-                <li><strong>Outils de suivi :</strong> Trello, GitLab</li>
-            </ul>
+            <h3>COMPÉTENCES TECHNIQUES</h3>
+            <section class="development">
+                <h4>Développement Front-End</h4>
+                <ul>
+                    <li><strong>Langages :</strong> JavaScript, HTML, CSS</li>
+                    <li><strong>Frameworks :</strong> Bootstrap</li>
+                    <li>Compétences en design, mobile-first et responsive</li>
+                </ul>
+            </section>
+            <section class="development">
+                <h4>Développement Back-End</h4>
+                <ul>
+                    <li><strong>Langages :</strong> PHP, C++, Python</li>
+                    <li><strong>Bases de données :</strong> MySQL</li>
+                    <li><strong>Frameworks :</strong> Node.js, Django</li>
+                </ul>
+            </section>
+            <section class="development">
+                <h4>Compétences transversales</h4>
+                <ul>
+                    <li>Plan de tests unitaires et fonctionnels</li>
+                    <li><strong>Systèmes :</strong> Linux</li>
+                    <li><strong>DevOps :</strong> Docker</li>
+                    <li><strong>Contrôle de version :</strong> Git</li>
+                    <li><strong>Méthodologies :</strong> Agile</li>
+                    <li><strong>Outils de suivi :</strong> Trello, GitLab</li>
+                </ul>
+            </section>
         </section>
 
-        <section class="soft-skills">
+        <section class="skills">
           <h3>COMPÉTENCES PERSONNELLES</h3>
           <ul>
                 <li><strong>Informatique :</strong> Développement d'une application d'apprentissage de la lecture (Unity3D)</li>
                 <li><strong>Savoir-faire :</strong> réflexion, analyse, logique algorithmique, autonomie, aptitude à apprendre, adaptabilité</li>
           </ul>
         </section>
-        <section class="soft-skills">
+
+        <section class="skills">
           <h3>LANGUES</h3>
           <ul>
                 <li>Français : Langue maternelle</li>
                 <li>Anglais : B1</li>
           </ul>
         </section>
-        <section class="soft-skills">
+        
+        <section class="skills">
           <h3>LOISIRS</h3>
           <ul>
                 <li>Bricolage : rénovation de la maison, fabrication d'objets en bois, dentelle et crochet</li>
@@ -95,13 +105,13 @@
       </aside>
 
       <!-- Colonne droite -->
-      <main class="right-column">
-        <header>
+      <main>
+        <hgroup>
           <h1>Muriel Bullot</h1>
-          <h2>Conceptrice Développeuse d'Applications</h2>
-        </header>
+          <p>Conceptrice Développeuse d'Applications</p>
+        </hgroup>
 
-        <section class="profil">
+        <section class="experience">
           <p>
             Titulaire d'un DUT Informatique, analyste programmeuse, 
             j'ai conçu et programmé des exercices interactifs pour mes élèves 
@@ -117,84 +127,48 @@
 
         <section class="experience">
             <h3>EXPÉRIENCES PROFESSIONNELLES</h3>
-            <p> <span class="greyTitle">Février 2024 à février 2025 :</span><br>
-                <span>Alternance chez Probayes (fournisseur de solutions en IA).</span><br>
-                <span class="smaller">Montbonnot Saint-Martin (38)</span>
-            </p>
-            <ul>
-                <li>Réalisation de <strong>plan de tests unitaires en C++</strong> sur un produit
-                    de planification de ressources humaines,</li>
-                <li>Collaboration avec l'équipe de développement pour 
-                    <strong>identifier et corriger les anomalies</strong>,</li>
-                <li><strong>Refactoring du code C++</strong> 
-                    pour améliorer la lisibilité, la maintenance, la lisibilité 
-                    et les performances de l'application.</li>
-            </ul>
-            <p> <span class="greyTitle">1991 - 2023 :</span><br>
-                <span>Professeur des écoles dans le primaire.</span><br>
-            </p>
-            <ul>
-                <li><strong>Codage avec Didapage</strong> pour créer des exercices intéractifs
-                    numériques pour mes élèves,</li>
-                <li>Enseignement du <strong>codage avec Scratch</strong>,</li>
-                <li>Conception de séquences adaptées après <strong>analyse</strong> 
-                    des leçons en fonction des niveaux d'apprentissage des élèves,</li>
-                <li><strong>Évaluation et optimisation</strong> 
-                    continue des séquences pédagogiques,</li>
-                <li><strong>Travail régulier en équipe</strong> 
-                    pédagogique pour planifier, ajuster et partager les méthodes d’enseignement.</li>
-            </ul>
+            <section class="subject">
+                <p class="greyTitle">Février 2024 à février 2025 :</p>
+                <p>Alternance chez Probayes (fournisseur de solutions en IA).</p>
+                <small>Montbonnot Saint-Martin (38)</small>
+                <ul>
+                    <li>Réalisation de <strong>plan de tests unitaires en C++</strong> sur un produit
+                        de planification de ressources humaines,</li>
+                    <li>Collaboration avec l'équipe de développement pour 
+                        <strong>identifier et corriger les anomalies</strong>,</li>
+                    <li><strong>Refactoring du code C++</strong> 
+                        pour améliorer la lisibilité, la maintenance, la lisibilité 
+                        et les performances de l'application.</li>
+                </ul>
+            </section>
+            <section class="subject">
+                <p class="greyTitle">1991 - 2023 :</p>
+                <p>Professeur des écoles dans le primaire.</p>
+                <ul>
+                    <li><strong>Codage avec Didapage</strong> pour créer des exercices intéractifs
+                        numériques pour mes élèves,</li>
+                    <li>Enseignement du <strong>codage avec Scratch</strong>,</li>
+                    <li>Conception de séquences adaptées après <strong>analyse</strong> 
+                        des leçons en fonction des niveaux d'apprentissage des élèves,</li>
+                    <li><strong>Évaluation et optimisation</strong> 
+                        continue des séquences pédagogiques,</li>
+                    <li><strong>Travail régulier en équipe</strong> 
+                        pédagogique pour planifier, ajuster et partager les méthodes d’enseignement.</li>
+                </ul>
+            </section>
         </section>
 
-        <section class="projects">
-
-          <!-- <div class="project direct-link"
-            data-link="code/html/project_territoryCapture.html">
-            <h4>Projet TerritoryCapture – Handigital 2025 (durées 47 heures)</h4>
-            <h4>Création d’un jeu avec le framework Pygame en équipe.</h4>
-            <ul>
-              <li>Créer un cahier des charges</li>
-              <li>Utilisation de git et github</li>
-              <li>Développement en python</li>
-            </ul>
-          </div>
-
-          <div class="project direct-link"
-            data-link="code/html/project_chatGames.html">
-            <h4>Projet Soutenance – Handigital 2025 (durées 365 heures)</h4>
-            <h4>Application web (PHP / JS / SQL) pour mettre en relation des gamers.</h4>
-            <ul>
-              <li>Analyse et compréhension du cahier des charges d’un client fictif ;</li>
-              <li>Création du Design sous  FIGMA</li>
-              <li>Développement en PHP/ Javascript</li>
-              <li>Base de données SQL accessible sur PHPmyadmin.</li>
-            </ul>
-          </div>
-
-          <div class="project direct-link"
-            data-link="code/html/project_lifeInno.html">
-            <h4>Projet LifeInno – Handigital 2024 (durées 30 heures)</h4>
-            <h4>Application web (PHP / JS / SQL) d'échange entre agent immobiliers.</h4>
-            <ul>
-              <li>Analyse et compréhension du cahier des charges d’un client fictif ;</li>
-              <li>Création du Design sous  FIGMA</li>
-              <li>Développement en PHP/ Javascript</li>
-              <li>Base de données SQL accessible sur PHPmyadmin.</li>
-              <li>Utilisation en un cour laps de temps.</li>
-            </ul>
-          </div> -->
-        </section>
-
-
-        <section class="education">
-          <h3>FORMATIONS</h3>
-            <p> <span class="greyTitle">2025 :</span>
-                <span>Développeuse web et web mobile (bac +2)</span><br>
-                <span class="greyTitle">1991 :</span>
-                <span>Ecole Normale de l’éducation nationale</span><br>
-                <span class="greyTitle">1988 :</span>
-                <span>DUT informatique, analyste programmeuse</span><br>
-            </p>
+        <section class="experience">
+            <h3>FORMATIONS</h3>
+            <section class="subject">
+                <p class="greyTitle">2025 : <span>Développeuse web et web mobile (bac +2)</span></p>
+            </section>
+            <section class="subject">
+                <p class="greyTitle">1991 : <span>Ecole Normale de l'éducation nationale</span></p>
+            </section>
+            <section class="subject">
+                <p class="greyTitle">1988 : <span>DUT informatique, analyste programmeuse</span></p>
+            </section>
         </section>
 
       </main>
