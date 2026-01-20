@@ -7,176 +7,171 @@
   <link rel="stylesheet" href="code/css/styles.css">
 </head>
 <body>
+    <div class="page-content">
+        <!-- ================== NAVBAR ==================  -->
+        <nav class="sidebar">
+            <h2>Portfolio</h2>
+            <ul>
+            <li><a href="index.html">CV en ligne</a></li>
+            <li><a href="code/html/project_territoryCapture.html">Projet Territory Capture</a></li>
+            <li><a href="code/html/project_chatGames.html">Projet Chat Games</a></li>
+            <li><a href="code/html/project_lifeInno.html">Projet Life Inno</a></li>
+            </ul>
+        </nav>
+        <script>
+            // Auto active le bon lien dans la navbar
+            const page = location.pathname.split("/").pop();
+            document.querySelectorAll(".sidebar a").forEach(link => {
+            if (link.getAttribute("href") === page || link.getAttribute("href").endsWith(page)) {
+                link.classList.add("active");
+            }
+            });
+        </script>
 
-  <!-- ================== NAVBAR ================== -->
-  <nav class="sidebar">
-    <h2>Portfolio</h2>
-    <ul>
-      <li><a href="index.html">CV en ligne</a></li>
-      <li><a href="code/html/project_territoryCapture.html">Projet Territory Capture</a></li>
-      <li><a href="code/html/project_chatGames.html">Projet Chat Games</a></li>
-      <li><a href="code/html/project_lifeInno.html">Projet Life Inno</a></li>
-    </ul>
-  </nav>
+        <!-- ================== PAGE CV ==================  -->
+        <div class="cv-container">
+            <hgroup>
+                <h1>Muriel Bullot</h1>
+                <p>Conceptrice Développeuse d'Applications</p>
+                <hr />  <!-- rajoute une ligne  -->
+            </hgroup>
+            <!-- Colonne gauche -->
+            <aside>
+                <section class="contact">
+                    <h3>CONTACT</h3>
+                    <p>06 84 19 23 67</p>
+                    <adress>
+                    <p><a href="mailto:gagnantnicolas64@gmail.com">murielbullot@hotmail.fr</a></p>
+                    <p><a href="https://github.com/GagnantN" target="_blank">github.com/MurielBullotIsere</a></p>
+                    </adress>
+                    <p><a href="https://linkedin.com/in/nicolas-gagnant-938b3a182" target="_blank">linkedin.com/in/muriel-bullot-556697165/</a></p>
+                    <p>Villard-Bonnot</p>
+                    <p>♿ <strong>RQTH</strong></p>
+                </section>
 
-  <script>
-    // Auto active le bon lien dans la navbar
-    const page = location.pathname.split("/").pop();
-    document.querySelectorAll(".sidebar a").forEach(link => {
-      if (link.getAttribute("href") === page || link.getAttribute("href").endsWith(page)) {
-        link.classList.add("active");
-      }
-    });
-  </script>
-  <!-- ================== FIN NAVBAR ================== -->
+                <section class="skills">
+                    <h3>COMPÉTENCES TECHNIQUES</h3>
+                    <section class="development">
+                        <h4>Développement Front-End</h4>
+                        <ul>
+                            <li><strong>Langages</strong> : JavaScript, HTML, CSS</li>
+                            <li><strong>Frameworks</strong> : Bootstrap</li>
+                            <li>Compétences en design, mobile-first et responsive</li>
+                        </ul>
+                    </section>
+                    <section class="development">
+                        <h4>Développement Back-End</h4>
+                        <ul>
+                            <li><strong>Langages</strong> : PHP, C++, Python</li>
+                            <li><strong>Bases de données</strong> : MySQL</li>
+                            <li><strong>Framework</strong> : Node.js, Django</li>
+                        </ul>
+                    </section>
+                    <section class="development">
+                        <h4>Compétences transversales</h4>
+                        <ul>
+                            <li>Plan de tests unitaires et fonctionnels</li>
+                            <li><strong>Systèmes</strong> : Linux</li>
+                            <li><strong>DevOps</strong> : Docker</li>
+                            <li><strong>Contrôle de version</strong> : Git</li>
+                            <li><strong>Méthodologies</strong> : Agile</li>
+                            <li><strong>Outils de suivi</strong> : Trello, GitLab</li>
+                        </ul>
+                    </section>
+                </section>
 
-  <div class="page-content">
-    <div class="cv-container">
+                <section class="skills">
+                    <h3>COMPÉTENCES PERSONNELLES</h3>
+                    <ul>
+                        <li><strong>Informatique</strong> : Développement d'une application d'apprentissage de la lecture (Unity3D)</li>
+                        <li><strong>Savoir-faire</strong> : réflexion, analyse, logique algorithmique, autonomie, aptitude à apprendre, adaptabilité</li>
+                    </ul>
+                </section>
 
-      <!-- Colonne gauche -->
-      <aside>
-        <img src="assets/images/profil.jpg" alt="Photo de profil" class="profile-photo">
+                <section class="skills">
+                    <h3>LANGUES</h3>
+                    <ul>
+                        <li><strong>Français</strong> : Langue maternelle</li>
+                        <li><strong>Anglais</strong> : B1</li>
+                    </ul>
+                </section>
+                
+                <section class="skills">
+                    <h3>LOISIRS</h3>
+                    <ul>
+                        <li><strong>Bricolage</strong> : rénovation de la maison, fabrication d'objets en bois, dentelle et crochet</li>
+                    </ul>
+                </section>
+            </aside>
+            <div>
+                <img src="assets/images/profil.jpg" alt="Photo de profil" />
+            </div>
+            <!-- Colonne droite -->
+            <main>
+                <section class="experience">
+                    <p class="description">
+                    Titulaire d'un DUT Informatique, analyste programmeuse, 
+                    j'ai conçu et programmé des exercices interactifs pour mes élèves 
+                    tout au long de ma carrière d'enseignante. Passionnée par le codage 
+                    et l'analyse, j'ai choisi de me reconvertir vers la création d'outils numériques.
+                    <br>
+                    Actuellement en recherche d'alternance, je suis autonome, 
+                    logique et méthodique, avec une forte capacité d'adaptation. 
+                    Je souhaite contribuer à la conception et au développement 
+                    d'applications en mobilisant mon expérience et ma rigueur.
+                    </p>
+                </section>
 
-        <section class="contact">
-          <h3>CONTACT</h3>
-          <p>📞 06 84 19 23 67</p>
-          <adress>
-            <p>✉️ <a href="mailto:gagnantnicolas64@gmail.com">murielbullot@hotmail.fr</a></p>
-            <p>💻 <a href="https://github.com/GagnantN" target="_blank">github.com/MurielBullotIsere</a></p>
-          </adress>
-          <p>🔗 <a href="https://linkedin.com/in/nicolas-gagnant-938b3a182" target="_blank">linkedin.com/in/muriel-bullot-556697165/</a></p>
-          <p>📍 Villard-Bonnot</p>
-          <p>♿ <strong>RQTH</strong></p>
-        </section>
+                <section class="experience">
+                    <h3>EXPÉRIENCES PROFESSIONNELLES</h3>
+                    <section class="subject">
+                        <p class="greyTitle">Février 2024 à février 2025 :</p>
+                        <p>Alternance chez Probayes (fournisseur de solutions en IA).</p>
+                        <small>Montbonnot Saint-Martin (38)</small>
+                        <ul>
+                            <li>Réalisation de <strong>plan de tests unitaires en C++</strong> sur un produit
+                                de planification de ressources humaines,</li>
+                            <li>Collaboration avec l'équipe de développement pour 
+                                <strong>identifier et corriger les anomalies</strong>,</li>
+                            <li><strong>Refactoring du code C++</strong> 
+                                pour améliorer la lisibilité, la maintenance, la lisibilité 
+                                et les performances de l'application.</li>
+                        </ul>
+                    </section>
 
-        <section class="skills">
-            <h3>COMPÉTENCES TECHNIQUES</h3>
-            <section class="development">
-                <h4>Développement Front-End</h4>
-                <ul>
-                    <li><strong>Langages :</strong> JavaScript, HTML, CSS</li>
-                    <li><strong>Frameworks :</strong> Bootstrap</li>
-                    <li>Compétences en design, mobile-first et responsive</li>
-                </ul>
-            </section>
-            <section class="development">
-                <h4>Développement Back-End</h4>
-                <ul>
-                    <li><strong>Langages :</strong> PHP, C++, Python</li>
-                    <li><strong>Bases de données :</strong> MySQL</li>
-                    <li><strong>Frameworks :</strong> Node.js, Django</li>
-                </ul>
-            </section>
-            <section class="development">
-                <h4>Compétences transversales</h4>
-                <ul>
-                    <li>Plan de tests unitaires et fonctionnels</li>
-                    <li><strong>Systèmes :</strong> Linux</li>
-                    <li><strong>DevOps :</strong> Docker</li>
-                    <li><strong>Contrôle de version :</strong> Git</li>
-                    <li><strong>Méthodologies :</strong> Agile</li>
-                    <li><strong>Outils de suivi :</strong> Trello, GitLab</li>
-                </ul>
-            </section>
-        </section>
+                    <section class="subject">
+                        <p class="greyTitle">1991 - 2023 :</p>
+                        <p>Professeur des écoles dans le primaire.</p>
+                        <ul>
+                            <li><strong>Codage avec Didapage</strong> pour créer des exercices intéractifs
+                                numériques pour mes élèves,</li>
+                            <li>Enseignement du <strong>codage avec Scratch</strong>,</li>
+                            <li>Conception de séquences adaptées après <strong>analyse</strong> 
+                                des leçons en fonction des niveaux d'apprentissage des élèves,</li>
+                            <li><strong>Évaluation et optimisation</strong> 
+                                continue des séquences pédagogiques,</li>
+                            <li><strong>Travail régulier en équipe</strong> 
+                                pédagogique pour planifier, ajuster et partager les méthodes d’enseignement.</li>
+                        </ul>
+                    </section>
+                </section>
 
-        <section class="skills">
-          <h3>COMPÉTENCES PERSONNELLES</h3>
-          <ul>
-                <li><strong>Informatique :</strong> Développement d'une application d'apprentissage de la lecture (Unity3D)</li>
-                <li><strong>Savoir-faire :</strong> réflexion, analyse, logique algorithmique, autonomie, aptitude à apprendre, adaptabilité</li>
-          </ul>
-        </section>
-
-        <section class="skills">
-          <h3>LANGUES</h3>
-          <ul>
-                <li>Français : Langue maternelle</li>
-                <li>Anglais : B1</li>
-          </ul>
-        </section>
-        
-        <section class="skills">
-          <h3>LOISIRS</h3>
-          <ul>
-                <li>Bricolage : rénovation de la maison, fabrication d'objets en bois, dentelle et crochet</li>
-          </ul>
-        </section>
-      </aside>
-
-      <!-- Colonne droite -->
-      <main>
-        <hgroup>
-          <h1>Muriel Bullot</h1>
-          <p>Conceptrice Développeuse d'Applications</p>
-        </hgroup>
-
-        <section class="experience">
-          <p>
-            Titulaire d'un DUT Informatique, analyste programmeuse, 
-            j'ai conçu et programmé des exercices interactifs pour mes élèves 
-            tout au long de ma carrière d'enseignante. Passionnée par le codage 
-            et l'analyse, j'ai choisi de me reconvertir vers la création d'outils numériques.
-          <br>
-            Actuellement en recherche d'alternance, je suis autonome, 
-            logique et méthodique, avec une forte capacité d'adaptation. 
-            Je souhaite contribuer à la conception et au développement 
-            d'applications en mobilisant mon expérience et ma rigueur.
-          </p>
-        </section>
-
-        <section class="experience">
-            <h3>EXPÉRIENCES PROFESSIONNELLES</h3>
-            <section class="subject">
-                <p class="greyTitle">Février 2024 à février 2025 :</p>
-                <p>Alternance chez Probayes (fournisseur de solutions en IA).</p>
-                <small>Montbonnot Saint-Martin (38)</small>
-                <ul>
-                    <li>Réalisation de <strong>plan de tests unitaires en C++</strong> sur un produit
-                        de planification de ressources humaines,</li>
-                    <li>Collaboration avec l'équipe de développement pour 
-                        <strong>identifier et corriger les anomalies</strong>,</li>
-                    <li><strong>Refactoring du code C++</strong> 
-                        pour améliorer la lisibilité, la maintenance, la lisibilité 
-                        et les performances de l'application.</li>
-                </ul>
-            </section>
-            <section class="subject">
-                <p class="greyTitle">1991 - 2023 :</p>
-                <p>Professeur des écoles dans le primaire.</p>
-                <ul>
-                    <li><strong>Codage avec Didapage</strong> pour créer des exercices intéractifs
-                        numériques pour mes élèves,</li>
-                    <li>Enseignement du <strong>codage avec Scratch</strong>,</li>
-                    <li>Conception de séquences adaptées après <strong>analyse</strong> 
-                        des leçons en fonction des niveaux d'apprentissage des élèves,</li>
-                    <li><strong>Évaluation et optimisation</strong> 
-                        continue des séquences pédagogiques,</li>
-                    <li><strong>Travail régulier en équipe</strong> 
-                        pédagogique pour planifier, ajuster et partager les méthodes d’enseignement.</li>
-                </ul>
-            </section>
-        </section>
-
-        <section class="experience">
-            <h3>FORMATIONS</h3>
-            <section class="subject">
-                <p class="greyTitle">2025 : <span>Développeuse web et web mobile (bac +2)</span></p>
-            </section>
-            <section class="subject">
-                <p class="greyTitle">1991 : <span>Ecole Normale de l'éducation nationale</span></p>
-            </section>
-            <section class="subject">
-                <p class="greyTitle">1988 : <span>DUT informatique, analyste programmeuse</span></p>
-            </section>
-        </section>
-
-      </main>
+                <section class="experience">
+                    <h3>FORMATIONS</h3>
+                    <section class="subject">
+                        <p class="greyTitle">2025 : <span>Développeuse web et web mobile (bac +2)</span></p>
+                    </section>
+                    <section class="subject">
+                        <p class="greyTitle">1991 : <span>Ecole Normale de l'éducation nationale</span></p>
+                    </section>
+                    <section class="subject">
+                        <p class="greyTitle">1988 : <span>DUT informatique, analyste programmeuse</span></p>
+                    </section>
+                </section>
+            </main>
+        </div>
     </div>
-
-  </div>
-
-  <script src="code/js/main.js"></script>
+    <script src="code/js/main.js"></script>
 
 </body>
 </html>

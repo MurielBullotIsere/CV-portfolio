@@ -1,194 +1,207 @@
-/* =====================
-   RESET
-===================== */
+/* ============= GENERAL ============ */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
+  letter-spacing: 1.2px;
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #eaeaea;
-  color: #222;
-  /* line-height: 1.5; */
+  font-family: Calibri, Arial, sans-serif;
+  background: #ffffff;
+  color: #000000;
+  line-height: 1.5;
 }
 
-/* =====================
-   NAVBAR 
-===================== */
+.page-content {
+  display: grid;
+  grid-template-columns: 250px 1fr;  /* Sidebar: 250px + contenu principal: le reste */
+  padding: 30px;
+  gap: 20px;                /* espace uniforme entre les éléments enfants*/
+}
+
+
+/* ============== NAVBAR ================= */
 .sidebar {
-    position: fixed;
-    width: 230px;
-    height: 100%;
     background-color: #3d3d3d;
-    color: #fff;
+    color: #ffffff;
     padding: 20px;
+    font-size: 16px;
 }
-
-.sidebar ul {
-    padding: 0;
-    list-style: none;
-}
-
+      /* Portfolio */
 .sidebar h2 {
-    font-size: 1.4rem;
+    font-size: 1.6em;
     margin-bottom: 20px;
 }
-
-
-.sidebar li {
-  /* margin-bottom: 10px; */
+      /* listes des liens */
+.sidebar ul {
+    padding: 0;
+    list-style: none;   /* supprime les marqueurs visuels (puces ou numéros) des listes HTML */
 }
-
+      /* liens */ 
 .sidebar a {
   color: white;
-  display: block;
+  display: block;       /* transforme chaque lien en rectangle qui prend toute la largeur disponible */
   padding: 10px 0;
-  text-decoration: none;
 }
-
 .sidebar a.active,
 .sidebar a:hover {
   color: #f7b6b2;
   font-weight: bold;
 }
 
-
-/* =====================
-   PAGE
-===================== */
-.page-content {
-  display: flex;
-  justify-content: center;
-  padding: 30px;
-}
-
+/* ==================================== */
+/* ====           CV               ==== */
+/* ==================================== */
 .cv-container {
-  width: 900px;
-  background: #fff;
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  position: relative;
+  width: auto;
+  height: 100%;
+  background: #ffffff;
+  font-size: 20px;
 }
-
-/* =====================
-   HEADER GLOBAL
-===================== */
-main hgroup {
+      /* Header marron */
+hgroup {
   background: #7a5a55;
   color: #fff;
-  padding: 25px 30px 20px 140px;
-  border-radius: 0 0 0 0;
-  position: relative;
+  padding: 25px 30px 20px 25px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  height: 240px;
 }
-
-main hgroup h1 {
-  font-size: 2rem;
+      /* Muriel Bullot */
+hgroup h1 {
+  margin-left: 320px;
+  font-size: 3em;
   margin-bottom: 5px;
+  color: #f7b6b2;
 }
-
-main hgroup p {
-  font-size: 1.1rem;
+      /* Conceptrice Développeuse d'Applications */
+hgroup p {
+  margin-left: 320px;
+  padding-bottom: 20px;
+  font-size: 1.7em;
   font-weight: normal;
   opacity: 0.9;
 }
-
-/* =====================
-   PHOTO
-===================== */
-.profile-photo {
-  width: 110px;
+      /* Ligne de séparation */
+hr {
+  margin-left: 320px;
+  border: none;          
+  height: 3px;           
+  background-color: #ffffff;
+}
+/* ============== PHOTO =============== */
+      /* Encadrement de la photo avec 2 couleurs */ 
+.cv-container > div {
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    width: 180px;
+    height: 180px;
+    border: 3px solid #f7b6b2;
+    box-shadow: 0 0 4px #f15048;
+}
+      /* Photo avec une bordure blanche */
+.cv-container > div img{
+  width: 100%;
   height: auto;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  border: 4px solid #f7b6b2;
-  background: #fff;
+  border: 3px solid white;
+  object-fit: cover;            /* permet à l’image de remplir entièrement la div sans être déformée */
+  display: block;               /* enlève l’espace invisible sous l’image */
 }
 
-/* =====================
-   COLONNE GAUCHE
-===================== */
+/* ============== COLONNE GAUCHE =============== */
 aside {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  font-size: 0.8em;
+  top: 120px;
+  left: 20px;
+  width: 300px;
   background: #f7b6b2;
-  padding: 160px 20px 25px;
+  padding: 1em;
+  padding-top: 100px;
+  line-height: 1;
 }
-
+      /* Contact, Compétences Tchniques et Personnelles, Langues, Loisirs */
 aside h3 {
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  margin: 20px 0 10px;
+  font-size: 1.6em;
+  letter-spacing: 4px;
+  margin-top: 10px;
+  color: white;
 }
-
-aside p,
-aside li {
-  font-size: 0.85rem;
-  margin-bottom: 6px;
-}
-
+      /* suppression des marqueurs visuels (puces ou numéros) des listes HTML */ 
 aside ul {
   list-style: none;
-  margin-left: 0;
 }
-
+      /* Espacement entre chaque retour de ligne volontaire */ 
+aside p,
+.skills li {
+  margin-bottom: 6px;
+}
+      /* RQTH */
 aside strong {
   font-weight: 600;
 }
+      /* Développement Front-End, Back-End, Compétences transversales */
+.skills h4 {
+  font-size: 1.2em;
+  margin-top: 12px;
+  margin-bottom: 2px;
+}
+      /* Soulignement en pointillé */
+.skills strong {
+  font-weight: normal;
+  text-decoration: underline dotted gray;   /* soulignement en pointillé */
+  text-underline-offset: 3px;                 /* espacement entre le texte et le soulignage */
+}
 
-/* =====================
-   COLONNE DROITE
-===================== */
+/* ============== COLONNE DROITE =============== */
 main {
-  padding-bottom: 30px;
-}
-
-main .experience {
-  padding: 20px 30px 0;
-}
-
-main h3 {
-  background: #f7b6b2;
-  padding: 6px 10px;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
-}
-
-main .experience p {
-  font-size: 0.9rem;
+  margin-left: 340px;
+  margin-right: 20px;
+  margin-top: 30px;
   text-align: justify;
-  margin-bottom: 5px;
 }
-
-.experience ul {
-  margin: 8px 0 15px 18px;
+      /* Texte descriptif, textes sous les h3 */
+.description, .subject {
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 1.1;
 }
-
-.experience li {
-  font-size: 0.9rem;
-  margin-bottom: 5px;
+      /* Expériences professionelles, Formations */
+main h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background: #f7b6b2;
+  padding-left: 20px;
+  font-size: 1.3em;
+  letter-spacing: 4px;
 }
-
-/* Formation */
-.education p {
-  font-size: 0.9rem;
-}
-
-/* =====================
-   TEXTE UTILITAIRE
-===================== */
+      /* Dates */
 .greyTitle {
+  margin-top: 10px;
   font-weight: bold;
-  color: #909090;
+  color: #f7b6b2;
+  text-shadow: 1px 1px 2px #f15048;
+  
 }
+      /* Textes sur la même ligne que les dates */
 .greyTitle span {
   font-weight: normal;
   color: #000000;
+  text-shadow: none;
 }
 
+      /* Décalage des puces vers la droite  */
+.experience li {
+    margin: 0 0 10px 40px;
+}
+      /* Montbonnot Saint-Martin (38) */
 small {
-  font-size: 0.7rem;
+  font-size: 0.8em;
   color: #666;
 }
 
