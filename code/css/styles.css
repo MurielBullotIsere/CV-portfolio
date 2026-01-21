@@ -21,7 +21,9 @@ body {
 }
 
 
-/* ============== NAVBAR ================= */
+/* ==================================== */
+/* ====         NAVBAR             ==== */
+/* ==================================== */
 .sidebar {
     background-color: #3d3d3d;
     color: #ffffff;
@@ -110,7 +112,6 @@ hr {
   object-fit: cover;            /* permet à l’image de remplir entièrement la div sans être déformée */
   display: block;               /* enlève l’espace invisible sous l’image */
 }
-
 /* ============== COLONNE GAUCHE =============== */
 aside {
   border-top-left-radius: 10px;
@@ -157,7 +158,6 @@ aside strong {
   text-decoration: underline dotted gray;   /* soulignement en pointillé */
   text-underline-offset: 3px;                 /* espacement entre le texte et le soulignage */
 }
-
 /* ============== COLONNE DROITE =============== */
 main {
   margin-left: 340px;
@@ -186,7 +186,6 @@ main h3 {
   font-weight: bold;
   color: #f7b6b2;
   text-shadow: 1px 1px 2px #f15048;
-  
 }
       /* Textes sur la même ligne que les dates */
 .greyTitle span {
@@ -194,7 +193,6 @@ main h3 {
   color: #000000;
   text-shadow: none;
 }
-
       /* Décalage des puces vers la droite  */
 .experience li {
     margin: 0 0 10px 40px;
@@ -204,15 +202,11 @@ small {
   font-size: 0.8em;
   color: #666;
 }
-
-/* =====================
-   LIENS
-===================== */
+/* ============= LIENS ================= */
 a {
   color: #222;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }

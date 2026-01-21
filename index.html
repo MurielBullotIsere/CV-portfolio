@@ -20,7 +20,10 @@
         </nav>
         <script>
             // Auto active le bon lien dans la navbar
-            const page = location.pathname.split("/").pop();
+            const page = location.pathname.split("/").pop();                    // récupère le chemin de l’URL actuelle, le coupe en morceau et garde le dernier
+            // Si Parcourt tous les liens de la sidebar. 
+            // Si la valeur de l’attribut href du lien correspond avec la page actuelle,
+            // ajout de class="active" au lien.
             document.querySelectorAll(".sidebar a").forEach(link => {
             if (link.getAttribute("href") === page || link.getAttribute("href").endsWith(page)) {
                 link.classList.add("active");
@@ -28,14 +31,15 @@
             });
         </script>
 
-        <!-- ================== PAGE CV ==================  -->
+<!-- ================================== PAGE CV ===========================================  -->
         <div class="cv-container">
+<!---------------------------------  Header marron  ----------------------------------------->
             <hgroup>
                 <h1>Muriel Bullot</h1>
                 <p>Conceptrice Développeuse d'Applications</p>
                 <hr />  <!-- rajoute une ligne  -->
             </hgroup>
-            <!-- Colonne gauche -->
+<!----------------------- Colonne gauche à cheval sur le header------------------------------------------>
             <aside>
                 <section class="contact">
                     <h3>CONTACT</h3>
@@ -103,10 +107,11 @@
                     </ul>
                 </section>
             </aside>
+<!----------------------- Photo à cheval sur la colonne gauche et le header------------------------------------------>
             <div>
                 <img src="assets/images/profil.jpg" alt="Photo de profil" />
             </div>
-            <!-- Colonne droite -->
+<!---------------------- Colonne droite -------------------------------------------------->
             <main>
                 <section class="experience">
                     <p class="description">
