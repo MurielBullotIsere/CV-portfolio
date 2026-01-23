@@ -1,0 +1,99 @@
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+/* capture d'écran et boutons*/    
+.carousel {
+  position: relative;   /* l'élément sert de référence si ajout d'éléments à l’intérieur en "position: absolute;" */
+  width: 100%;
+  max-width: 700px;
+  height: 300px;
+  margin: 20px auto;    /* auto : centre l'élément horizontalement */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column; /* pour placer les boutons en bas */
+}
+.carousel-images {
+  flex: 1;               /* occupe tout l’espace disponible sauf les boutons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;     /* Cache tout ce qui dépasse du cadre */
+}
+.carousel-images > img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;    /* réduit l'image pour la voir en entier, pas de déformation */
+  display: none;          /* par défaut, aucune image n'est visible */
+  border-radius: 8px;
+  cursor: zoom-in;        /* Change le curseur pour indiquer qu’on peut cliquer pour zoomer */
+}
+.carousel-images img.active {
+  display: block;       /* l'élémént redevient visible : il commence sur une nouvelle ligne
+                           prend toute la largeur disponible par défaut*/
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ========== FULLSCREEN IMAGE ========== */
+.img-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.img-overlay .inAllgamers{
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+
+.close-img {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.overlay-prev, .overlay-next {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.overlay-prev { left: 20px; }
+.overlay-next { right: 20px; }

@@ -1,18 +1,18 @@
 document.getElementById("navbar").innerHTML = `
-<nav class="sidebar">
-  <h2>Portfolio</h2>
-  <ul>
-    <li><a href="../../index.html">CV en ligne</a></li>
-    <li><a href="project_territoryCapture.html">Projet Territory Capture</a></li>
-    <li><a href="project_chatGames.html">Projet Chat Games</a></li>
-    <li><a href="project_lifeInno.html">Projet Life Inno</a></li>
-  </ul>
-</nav>
+      <h2>Portfolio</h2>
+      <ul>
+      <li><a href="../../code/html/project_allgamers.html">Projet Allgamers</a></li>
+      <li><a href="../../index.html">CV en ligne</a></li>
+      </ul>
 `;
 
-const page = location.pathname.split("/").pop();
-document.querySelectorAll(".sidebar a").forEach(link => {
-  if (link.getAttribute("href") === page) {
-    link.classList.add("active");
+  // Auto active le bon lien dans la navbar
+  const page = location.pathname.split("/").pop();                    // récupère le chemin de l’URL actuelle, le coupe en morceau et garde le dernier
+  // Si Parcourt tous les liens de la sidebar. 
+  // Si la valeur de l’attribut href du lien correspond avec la page actuelle,
+  // ajout de class="active" au lien.
+  document.querySelectorAll(".sidebar a").forEach(link => {
+  if (link.getAttribute("href") === page || link.getAttribute("href").endsWith(page)) {
+      link.classList.add("active");
   }
-});
+  });
