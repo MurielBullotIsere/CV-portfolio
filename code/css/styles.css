@@ -219,3 +219,26 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/* --- Gestion de la photo de profil selon la taille d'écran --- */
+
+/* Par défaut : on cache la photo mobile, on montre la photo desktop */
+.logo-mobile {
+    display: none;
+}
+
+.logo-desktop {
+    display: block;
+}
+
+/* Sur mobile (largeur max 768px) : on inverse */
+@media (max-width: 768px) {
+
+    .logo-mobile {
+        display: flex;              /* visible sur mobile */
+        justify-content: flex-end;  /* alignée à droite dans la navbar */
+    }
+
+    .logo-desktop {
+        display: none;              /* cachée sur mobile */
+    }
+}

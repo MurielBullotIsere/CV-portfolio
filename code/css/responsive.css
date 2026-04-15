@@ -1,0 +1,98 @@
+/* ==================================== */
+/* ====   RESPONSIVE MOBILE        ==== */
+/* ==================================== */
+/* Par défaut (desktop) : photo mobile cachée, photo desktop visible */
+.logo-mobile {
+    display: none;
+}
+
+.logo-desktop {
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+  /* --- Grille page principale --- */
+  .page-content {
+    grid-template-columns: 1fr;   /* navbar + cv en colonne */
+    padding: 10px;
+    gap: 10px;
+  }
+
+  /* --- CV : on annule le position:relative 
+     pour que les absolute ne se référencient plus à lui --- */
+  .cv-container {
+    font-size: 15px;
+  }
+
+  /* --- Header : on retire le margin-left 
+     qui était prévu pour laisser la place à la photo --- */
+  hgroup {
+    border-radius: 10px;
+    min-height: auto;
+    padding: 15px;
+    text-align: center;
+  }
+  hgroup h1 {
+    margin-left: 0;
+    font-size: 2em;
+  }
+  hgroup p {
+    margin-left: 0;
+    font-size: 1.2em;
+  }
+  hr {
+    margin-left: 0;
+  }
+
+  /* --- Photo desktop : cachée sur mobile --- */
+  .logo-desktop {
+      display: none;
+  }
+
+  /* --- Navbar : titre/liens à gauche, photo à droite --- */
+  .summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  /* pousse la photo à droite */
+    align-items: center;             /* aligne verticalement au centre */
+    width: 100%;
+  }
+
+  /* --- Photo desktop : cachée sur mobile --- */
+  .logo-desktop {
+    display: none;
+  }
+
+  /* --- Photo mobile : visible, à droite dans la navbar --- */
+  .logo-mobile {
+    display: flex;
+    position: static;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;   /* empêche la photo de rétrécir si le texte prend de la place */
+  }
+
+  /* --- Colonne gauche : on sort du flux absolu --- */
+  aside {
+    position: static;      /* annule le position:absolute */
+    width: 100%;
+    padding: 15px;
+    padding-top: 15px;     /* annule le padding-top:100px prévu pour la photo */
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  /* --- Colonne droite : on annule le margin-left fixe --- */
+  main {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .description, .subject {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
