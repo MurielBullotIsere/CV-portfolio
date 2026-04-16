@@ -29,13 +29,14 @@
 
         </nav>
         <script>
-            // Auto active le bon lien dans la navbar
-            const page = location.pathname.split("/").pop();                    // récupère le chemin de l’URL actuelle, le coupe en morceau et garde le dernier
-            // Si Parcourt tous les liens de la sidebar. 
-            // Si la valeur de l’attribut href du lien correspond avec la page actuelle,
-            // ajout de class="active" au lien.
+        //  Mettre d'une autre couleur le lien de navigation correspondant à la page actuellement ouverte.
+            // récupère le chemin de l’URL actuelle, le coupe à chaque "/" et garde le dernier élément (le nom de la page).
+            const page = location.pathname.split("/").pop();
+            // Sélectionne tous les liens de la barre de navigation et pour chaque lien :
             document.querySelectorAll(".sidebar a").forEach(link => {
+            // Si le href du lien correspond au nom de la page actuelle ou se termine par celui-ci
             if (link.getAttribute("href") === page || link.getAttribute("href").endsWith(page)) {
+                // Ajoute la classe "active" à ce lien 
                 link.classList.add("active");
             }
             });

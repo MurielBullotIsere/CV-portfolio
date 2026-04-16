@@ -1,3 +1,44 @@
+/* Change the color */
+
+/* liens */ 
+.sidebar a.active,
+.sidebar a:hover {
+  color: #f6c27c;
+}
+/* Header */
+hgroup {
+  background: #593606;
+  color: #fff;
+}
+/* Titre de la page : Allgamers */
+hgroup h1 {
+  color: #f6c27c;
+}
+/* Encadrement du logo avec 2 couleurs */ 
+.logo-container {
+  border: 3px solid #f6c27c;
+  box-shadow: 0 0 4px #F1A33B;
+}
+/* Colonne de gauche */
+aside {
+  background: #f6c27c;
+
+}
+/* Titre : PROJET, TECHNOLOGIES, COMPÉTENCES, GITHUB */
+aside h3 {
+  color: #593606;
+}
+/* Titre : Photo de démonstration, Galerie de code */
+main h3 {
+  background: #f6c27c;
+}
+
+
+
+
+
+
+
 .close {
   float: right;
   cursor: pointer;
